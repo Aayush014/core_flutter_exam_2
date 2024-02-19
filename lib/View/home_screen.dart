@@ -69,21 +69,26 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: 30, fontWeight: FontWeight.bold)),
                           ],
                         ),
-                        const SizedBox(
+                         SizedBox(
                           width: 350,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text('New Arrivals',
+                              InkWell(
+                                onTap: () {
+                                  Navigator.of(context).pushNamed('listing');
+                                },
+                                child: const Text('New Arrivals',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w600)),
+                              ),
+                              const Text('Men',
                                   style:
                                       TextStyle(fontWeight: FontWeight.w600)),
-                              Text('Men',
+                              const Text('Women',
                                   style:
                                       TextStyle(fontWeight: FontWeight.w600)),
-                              Text('Women',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.w600)),
-                              Text('Kids',
+                              const Text('Kids',
                                   style:
                                       TextStyle(fontWeight: FontWeight.w600)),
                             ],

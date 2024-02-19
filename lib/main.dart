@@ -1,4 +1,7 @@
+import 'package:core_flutter_exam_2/View/cart_screen.dart';
 import 'package:core_flutter_exam_2/View/home_screen.dart';
+import 'package:core_flutter_exam_2/View/listing_screen.dart';
+import 'package:core_flutter_exam_2/View/product_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,8 +20,12 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: 'product',
       routes: {
         '/': (context) => const HomePage(),
+        'listing': (context) => const ListingScreen(),
+        'product': (context) => const ProductScreen(),
+        'cart': (context) => const CartScreen(),
       },
     );
   }
